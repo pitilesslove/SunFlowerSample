@@ -17,6 +17,7 @@ object Versions {
     const val appcompat = "1.5.1"
     const val constraintLayout = "2.0.0-beta8"
     const val material = "1.6.0-rc01"
+    const val navigation = "2.5.2"
 
     const val junit = "4.12"
     const val extJunit = "1.1.1"
@@ -30,7 +31,9 @@ object Libs {
     private const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     private const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     private const val material = "com.google.android.material:material:${Versions.material}"
-
+    private const val navigationRuntime = "androidx.navigation:navigation-runtime-ktx:${Versions.navigation}"
+    private const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    private const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
 
     // Test
     private const val junit = "junit:junit:${Versions.junit}"
@@ -44,6 +47,9 @@ object Libs {
         add(appcompat)
         add(constraintLayout)
         add(material)
+        add(navigationRuntime)
+        add(navigationFragment)
+        add(navigationUi)
     }
 
     val androidTestLibraries = arrayListOf<String>().apply {

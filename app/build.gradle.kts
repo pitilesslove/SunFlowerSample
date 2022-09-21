@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.config.KotlinCompilerVersion
 
 plugins {
     id("com.android.application")
-    kotlin("android")
+    id("kotlin-android")
 }
 
 android {
@@ -17,7 +17,7 @@ android {
         testInstrumentationRunner = Apps.androidTestInstrumentation
     }
     buildFeatures {
-        viewBinding = true
+        dataBinding = true
     }
     buildTypes {
         getByName("release") {

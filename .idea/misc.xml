@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/learn_android/SunFlowerSample/app/src/main/res/drawable/ic_launcher_background.xml" value="0.244" />
+        <entry key="..\:/learn_android/SunFlowerSample/app/src/main/res/layout/activity_garden.xml" value="0.1875" />
+        <entry key="..\:/learn_android/SunFlowerSample/app/src/main/res/layout/fragment_view_pager.xml" value="0.2234375" />
         <entry key="..\:/learn_android/SunFlowerSample/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.244" />
       </map>
     </option>
