@@ -1,9 +1,8 @@
-
-import org.jetbrains.kotlin.config.KotlinCompilerVersion
-
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -19,6 +18,10 @@ android {
     buildFeatures {
         dataBinding = true
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -32,7 +35,14 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     // app libs
     implementation(Libs.appLibraries)
+    // kapts
+    kapt(Kapts.list)
     // test libs
     testImplementation(Libs.testLibraries)
     androidTestImplementation(Libs.androidTestLibraries)
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }

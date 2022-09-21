@@ -18,6 +18,7 @@ object Versions {
     const val constraintLayout = "2.0.0-beta8"
     const val material = "1.6.0-rc01"
     const val navigation = "2.5.2"
+    const val hilt = "2.38.1"
 
     const val junit = "4.12"
     const val extJunit = "1.1.1"
@@ -34,6 +35,7 @@ object Libs {
     private const val navigationRuntime = "androidx.navigation:navigation-runtime-ktx:${Versions.navigation}"
     private const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     private const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+    private const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
 
     // Test
     private const val junit = "junit:junit:${Versions.junit}"
@@ -50,6 +52,7 @@ object Libs {
         add(navigationRuntime)
         add(navigationFragment)
         add(navigationUi)
+        add(hilt)
     }
 
     val androidTestLibraries = arrayListOf<String>().apply {
@@ -61,6 +64,14 @@ object Libs {
         add(junit)
     }
 
+}
+
+object Kapts {
+    private const val hilt = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+
+    val list  = arrayListOf<String>().apply {
+        add(hilt)
+    }
 }
 
 // util functions for adding the differnt type dependencies from build.gradle file
