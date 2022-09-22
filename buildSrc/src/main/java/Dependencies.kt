@@ -19,6 +19,7 @@ object Versions {
     const val material = "1.6.0-rc01"
     const val navigation = "2.5.2"
     const val hilt = "2.38.1"
+    const val lifecycle = "2.2.0"
 
     const val junit = "4.12"
     const val extJunit = "1.1.1"
@@ -36,6 +37,7 @@ object Libs {
     private const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     private const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
     private const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
+    private const val liveData =  "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
 
     // Test
     private const val junit = "junit:junit:${Versions.junit}"
@@ -53,6 +55,7 @@ object Libs {
         add(navigationFragment)
         add(navigationUi)
         add(hilt)
+        add(liveData)
     }
 
     val androidTestLibraries = arrayListOf<String>().apply {
