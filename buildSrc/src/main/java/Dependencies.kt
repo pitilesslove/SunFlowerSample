@@ -20,6 +20,7 @@ object Versions {
     const val navigation = "2.5.2"
     const val hilt = "2.42"
     const val lifecycle = "2.2.0"
+    const val room = "2.4.3"
 
     const val junit = "4.12"
     const val extJunit = "1.1.1"
@@ -38,6 +39,9 @@ object Libs {
     private const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
     private const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     private const val liveData =  "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+    private const val room_runtime = "androidx.room:room-runtime:${Versions.room}"
+    private const val room_ktx = "androidx.room:room-ktx:${Versions.room}"
+
 
     // Test
     private const val junit = "junit:junit:${Versions.junit}"
@@ -56,6 +60,8 @@ object Libs {
         add(navigationUi)
         add(hilt)
         add(liveData)
+        add(room_runtime)
+        add(room_ktx)
     }
 
     val androidTestLibraries = arrayListOf<String>().apply {
@@ -69,11 +75,14 @@ object Libs {
 
 }
 
+// Kotlin Annotation Processing tools
 object Kapts {
     private const val hilt = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    private const val room = "androidx.room:room-compiler:${Versions.room}"
 
     val list  = arrayListOf<String>().apply {
         add(hilt)
+        add(room)
     }
 }
 

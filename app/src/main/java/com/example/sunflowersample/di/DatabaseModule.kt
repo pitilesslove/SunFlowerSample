@@ -2,7 +2,6 @@ package com.example.sunflowersample.di
 
 import android.content.Context
 import com.example.sunflowersample.data.AppDatabase
-import com.example.sunflowersample.data.AppDatabaseImpl
 import com.example.sunflowersample.data.PlantDao
 import dagger.Module
 import dagger.Provides

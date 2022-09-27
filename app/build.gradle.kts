@@ -33,10 +33,10 @@ android {
 dependencies {
     // std libs
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    // app libs
-    implementation(Libs.appLibraries)
     // kapts
     kapt(Kapts.list)
+    // app libs
+    implementation(Libs.appLibraries)
     // test libs
     testImplementation(Libs.testLibraries)
     androidTestImplementation(Libs.androidTestLibraries)
