@@ -15,10 +15,9 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PlantListViewModel @Inject internal constructor(
+    plantRepository: PlantRepository,
     private val savedStateHandle: SavedStateHandle
 ) : ViewModel(){
-
-    private val plantRepository = PlantRepository()
     private val growZone: MutableStateFlow<Int> = MutableStateFlow(
         savedStateHandle.get(GROW_ZONE_SAVED_STATE_KEY) ?: NO_GROW_ZONE
     )

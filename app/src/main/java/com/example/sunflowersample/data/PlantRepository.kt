@@ -2,12 +2,11 @@ package com.example.sunflowersample.data
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
+import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class PlantRepository() {
-
-    private val plantDao = PlantDao()
+class PlantRepository @Inject constructor(private val plantDao: PlantDao) {
 
     fun getPlants() : Flow<List<String>> = flowOf(plantDao.getPlants())
 
@@ -23,7 +22,7 @@ class PlantRepository() {
 
         fun getInstance(plantDao: PlantDao) =
             instance ?: synchronized(this) {
-                instance ?: PlantRepository().also { instance = it }
+                instance ?: PlantRepository(plantDao).also { instance = it }
             }
     }
 }

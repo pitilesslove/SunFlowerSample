@@ -18,7 +18,7 @@ object Versions {
     const val constraintLayout = "2.0.0-beta8"
     const val material = "1.6.0-rc01"
     const val navigation = "2.5.2"
-    const val hilt = "2.38.1"
+    const val hilt = "2.42"
     const val lifecycle = "2.2.0"
 
     const val junit = "4.12"
