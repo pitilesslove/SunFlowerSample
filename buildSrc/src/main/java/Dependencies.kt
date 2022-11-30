@@ -23,6 +23,7 @@ object Versions {
     const val room = "2.4.3"
     const val work = "2.7.1"
     const val gson = "2.9.0"
+    const val fragment = "1.4.1"
 
     const val junit = "4.12"
     const val extJunit = "1.1.1"
@@ -46,12 +47,17 @@ object Libs {
     private const val work = "androidx.work:work-runtime-ktx:${Versions.work}"
     private const val work_runtime = "androidx.work:work-runtime-ktx:${Versions.work}"
     private const val gson = "com.google.code.gson:gson:${Versions.gson}"
+    private const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
 
 
     // Test
     private const val junit = "junit:junit:${Versions.junit}"
     private const val extJUnit = "androidx.test.ext:junit:${Versions.extJunit}"
     private const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espresso}"
+
+    // AndroidTest
+    private const val work_testing = "androidx.work:work-testing:${Versions.work}"
+    private const val fragment_testing = "androidx.fragment:fragment-testing:${Versions.fragment}"
 
 
     val appLibraries = arrayListOf<String>().apply {
@@ -70,11 +76,14 @@ object Libs {
         add(work)
         add(work_runtime)
         add(gson)
+        add(fragment)
     }
 
     val androidTestLibraries = arrayListOf<String>().apply {
         add(extJUnit)
         add(espressoCore)
+        add(work_testing)
+        add(fragment_testing)
     }
 
     val testLibraries = arrayListOf<String>().apply {
