@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.sunflowersample.adapters.GardenPlantingAdapter
 import com.example.sunflowersample.databinding.FragmentGardenBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -19,13 +20,14 @@ class GardenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentGardenBinding.inflate(inflater, container, false)
-//        val adapter = GardenPlantingAdapter()
-//        binding.gardenList.adapter = adapter
-//
-//        binding.addPlant.setOnClickListener {
+        val adapter = GardenPlantingAdapter()
+        binding.gardenList.adapter = adapter
+
+        binding.addPlant.setOnClickListener {
+            println("addPlant is clicked!")
 //            navigateToPlantListPage()
-//        }
-//
+        }
+
 //        subscribeUi(adapter, binding)
         return binding.root
     }

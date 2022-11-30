@@ -5,9 +5,8 @@ import androidx.databinding.adapters.Converters
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.example.sunflowersample.ALog
+import com.example.sunflowersample.utilities.ALog
 
 const val DATABASE_NAME = "sunflower-db"
 const val PLANT_DATA_FILENAME = "plants.json"

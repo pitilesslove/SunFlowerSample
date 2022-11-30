@@ -1,12 +1,13 @@
-package com.example.sunflowersample
+package com.example.sunflowersample.utilities
 
 import android.util.Log
+import com.example.sunflowersample.BuildConfig
 
+const val TAG = "SunFlower"
 /**
  * Logging Class
  * */
 object ALog {
-    private const val TAG = "SunFlowerSample"
     private val currentLineInfo: String
         get() {
             val trace = Thread.currentThread().stackTrace[4]
@@ -26,42 +27,42 @@ object ALog {
     }
 
     fun v(tag:String, parMessage: String) {
-        Log.v(tag, currentLineInfo + parMessage)
+        Log.v(tag,currentLineInfo + parMessage)
     }
     fun v(parMessage: String) {
-        Log.v(TAG, currentLineInfo + parMessage)
+        Log.v(TAG,currentLineInfo + parMessage)
     }
 
     fun d(tag:String,parMessage: String) {
         if(BuildConfig.DEBUG)
-            Log.d(tag, currentLineInfo + parMessage)
+            Log.d(tag,currentLineInfo + parMessage)
     }
     fun d(parMessage: String) {
         if(BuildConfig.DEBUG)
-            Log.d(TAG, currentLineInfo + parMessage)
+            Log.d(TAG,currentLineInfo + parMessage)
     }
 
     fun i(tag:String,parMessage: String) {
-        Log.i(tag, currentLineInfo + parMessage)
+        Log.i(tag,currentLineInfo + parMessage)
     }
     fun i(parMessage: String) {
-        Log.i(TAG, currentLineInfo + parMessage)
+        Log.i(TAG,currentLineInfo + parMessage)
     }
 
     fun w(tag:String, parMessage: String) {
-        Log.w(tag, currentLineInfo + parMessage)
+        Log.w(tag,currentLineInfo + parMessage)
     }
     fun w(parMessage: String) {
-        Log.w(TAG, currentLineInfo + parMessage)
+        Log.w(TAG,currentLineInfo + parMessage)
     }
 
     fun e(tag:String, parMessage: String) {
-        Log.e(tag, currentLineInfo + parMessage)
+        Log.e(tag,currentLineInfo + parMessage)
     }
     fun e(parMessage: String) {
-        Log.e(TAG, currentLineInfo + parMessage)
+        Log.e(TAG,currentLineInfo + parMessage)
     }
     fun e(tag:String, parMessage:String, e:Throwable){
-        Log.e(tag, currentLineInfo +parMessage, e)
+        Log.e(tag, currentLineInfo+parMessage, e)
     }
 }

@@ -21,6 +21,8 @@ object Versions {
     const val hilt = "2.42"
     const val lifecycle = "2.2.0"
     const val room = "2.4.3"
+    const val work = "2.7.1"
+    const val gson = "2.9.0"
 
     const val junit = "4.12"
     const val extJunit = "1.1.1"
@@ -41,6 +43,9 @@ object Libs {
     private const val liveData =  "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     private const val room_runtime = "androidx.room:room-runtime:${Versions.room}"
     private const val room_ktx = "androidx.room:room-ktx:${Versions.room}"
+    private const val work = "androidx.work:work-runtime-ktx:${Versions.work}"
+    private const val work_runtime = "androidx.work:work-runtime-ktx:${Versions.work}"
+    private const val gson = "com.google.code.gson:gson:${Versions.gson}"
 
 
     // Test
@@ -62,6 +67,9 @@ object Libs {
         add(liveData)
         add(room_runtime)
         add(room_ktx)
+        add(work)
+        add(work_runtime)
+        add(gson)
     }
 
     val androidTestLibraries = arrayListOf<String>().apply {
